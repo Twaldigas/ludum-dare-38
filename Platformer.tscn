@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=1]
+[gd_scene load_steps=45 format=1]
 
 [ext_resource path="res://world.gd" type="Script" id=1]
 [ext_resource path="res://scripts/player.gd" type="Script" id=2]
@@ -6,48 +6,99 @@
 [ext_resource path="res://scripts/treasure_chest_axt.gd" type="Script" id=4]
 [ext_resource path="res://assets/treasure_chest.png" type="Texture" id=5]
 [ext_resource path="res://assets/treasure_chest_open.png" type="Texture" id=6]
-[ext_resource path="res://assets/pick_up.smp" type="Sample" id=7]
-[ext_resource path="res://scripts/treasure_chest_key.gd" type="Script" id=8]
-[ext_resource path="res://scripts/treasure_chest_diving_eyeglasses.gd" type="Script" id=9]
-[ext_resource path="res://scripts/obstacle_plant_root.gd" type="Script" id=10]
-[ext_resource path="res://assets/obstacle_plant_root.png" type="Texture" id=11]
-[ext_resource path="res://assets/earth.png" type="Texture" id=12]
-[ext_resource path="res://assets/gras.png" type="Texture" id=13]
-[ext_resource path="res://assets/water.png" type="Texture" id=14]
-[ext_resource path="res://assets/bush.png" type="Texture" id=15]
-[ext_resource path="res://assets/glas.png" type="Texture" id=16]
-[ext_resource path="res://assets/cork.png" type="Texture" id=17]
+[ext_resource path="res://assets/VT323-Regular.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://assets/pick_up.smp" type="Sample" id=8]
+[ext_resource path="res://scripts/treasure_chest_battering_ram.gd" type="Script" id=9]
+[ext_resource path="res://scripts/treasure_chest_pick.gd" type="Script" id=10]
+[ext_resource path="res://scripts/treasure_chest_diving_eyeglasses.gd" type="Script" id=11]
+[ext_resource path="res://scripts/obstacle_plant_root.gd" type="Script" id=12]
+[ext_resource path="res://assets/obstacle_plant_root.png" type="Texture" id=13]
+[ext_resource path="res://scripts/obstacle_stones.gd" type="Script" id=14]
+[ext_resource path="res://assets/stones.png" type="Texture" id=15]
+[ext_resource path="res://scripts/obstacle_waterfall.gd" type="Script" id=16]
+[ext_resource path="res://assets/water.png" type="Texture" id=17]
+[ext_resource path="res://scripts/tunnel.gd" type="Script" id=18]
+[ext_resource path="res://assets/tunnel.png" type="Texture" id=19]
+[ext_resource path="res://scripts/obstacle_cork.gd" type="Script" id=20]
+[ext_resource path="res://assets/cork.png" type="Texture" id=21]
+[ext_resource path="res://scripts/lvl_exit.gd" type="Script" id=22]
+[ext_resource path="res://assets/earth.png" type="Texture" id=23]
+[ext_resource path="res://assets/gras.png" type="Texture" id=24]
+[ext_resource path="res://assets/montain.png" type="Texture" id=25]
+[ext_resource path="res://assets/bush.png" type="Texture" id=26]
+[ext_resource path="res://assets/glas.png" type="Texture" id=27]
+[ext_resource path="res://assets/sky.png" type="Texture" id=28]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12, 15.2121 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
 extents = Vector2( 12.6667, 32 )
 
-[sub_resource type="SampleLibrary" id=4]
+[sub_resource type="SampleLibrary" id=3]
 
 samples/pick_up = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
-"sample": ExtResource( 7 )
+"sample": ExtResource( 8 )
 }
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
-extents = Vector2( 38, 38 )
+extents = Vector2( 35, 38 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 2.43198, 13 )
+
+[sub_resource type="RectangleShape2D" id=11]
 
 custom_solver_bias = 0.0
 extents = Vector2( 13, 13 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=13]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 128 )
+
+[sub_resource type="RectangleShape2D" id=14]
+
+custom_solver_bias = 0.0
+extents = Vector2( 21.3333, 96 )
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 13 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13, 13 )
+
+[sub_resource type="RectangleShape2D" id=15]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.55557, 96 )
+
+[sub_resource type="RectangleShape2D" id=16]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 13, 13 )
+
+[sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
 extents = Vector2( 13.3023, 5.48889 )
@@ -62,11 +113,6 @@ extents = Vector2( 32, 0 )
 custom_solver_bias = 0.0
 extents = Vector2( 32, 13 )
 
-[sub_resource type="RectangleShape2D" id=9]
-
-custom_solver_bias = 0.0
-extents = Vector2( 13, 13 )
-
 [node name="World" type="Node2D"]
 
 script/script = ExtResource( 1 )
@@ -78,7 +124,7 @@ transform/pos = Vector2( 320, 0 )
 transform/scale = Vector2( 0.5, 0.5 )
 z/z = 2
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 2.13333, 0, 0, 2.10358, 1.14441e-05, 1.33514e-05 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -99,7 +145,7 @@ __meta__ = {
 
 transform/pos = Vector2( 1.14441e-05, 1.33514e-05 )
 transform/scale = Vector2( 2.13333, 2.10358 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -109,7 +155,6 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 transform/pos = Vector2( 0, 2.6226e-06 )
-transform/scale = Vector2( 1, 1 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -154,8 +199,9 @@ texture = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="TreasureChest"]
 
+editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.26316, 0, 0, 0.592857, 0, 12.75 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -170,17 +216,36 @@ __meta__ = {
 
 transform/pos = Vector2( 0, 12.75 )
 transform/scale = Vector2( 1.26316, 0.592857 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Label" type="Label" parent="TreasureChest"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -96.0
+margin/top = -96.0
+margin/right = 128.0
+margin/bottom = -32.0
+custom_fonts/font = ExtResource( 7 )
+text = "You got a axt."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="SamplePlayer" type="SamplePlayer" parent="TreasureChest"]
 
 config/polyphony = 1
-config/samples = SubResource( 4 )
+config/samples = SubResource( 3 )
 default/volume_db = 0.0
 default/pitch_scale = 1.0
 default/pan = 0.0
@@ -199,7 +264,7 @@ default/chorus_send = 0.0
 editor/display_folded = true
 transform/pos = Vector2( 144, -288 )
 transform/scale = Vector2( 0.5, 0.5 )
-script/script = ExtResource( 8 )
+script/script = ExtResource( 9 )
 
 [node name="SpriteClosed" type="Sprite" parent="TreasureChest2"]
 
@@ -218,8 +283,9 @@ texture = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="TreasureChest2"]
 
+editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.26316, 0, 0, 0.592857, 0, 12.75 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -234,7 +300,7 @@ __meta__ = {
 
 transform/pos = Vector2( 0, 12.75 )
 transform/scale = Vector2( 1.26316, 0.592857 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -244,7 +310,7 @@ __meta__ = {
 [node name="SamplePlayer" type="SamplePlayer" parent="TreasureChest2"]
 
 config/polyphony = 1
-config/samples = SubResource( 4 )
+config/samples = SubResource( 3 )
 default/volume_db = 0.0
 default/pitch_scale = 1.0
 default/pan = 0.0
@@ -258,12 +324,119 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 
+[node name="Label" type="Label" parent="TreasureChest2"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -96.0
+margin/top = -96.0
+margin/right = 288.0
+margin/bottom = -32.0
+custom_fonts/font = ExtResource( 7 )
+text = "You got a battlering ram."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TreasureChest3" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1616, -192 )
+transform/scale = Vector2( 0.5, 0.5 )
+script/script = ExtResource( 10 )
+
+[node name="SpriteClosed" type="Sprite" parent="TreasureChest3"]
+
+transform/pos = Vector2( 7.62939e-06, 1.90735e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SpriteOpen" type="Sprite" parent="TreasureChest3"]
+
+visibility/visible = false
+transform/scale = Vector2( 2.125, 2 )
+texture = ExtResource( 6 )
+
+[node name="Area2D" type="Area2D" parent="TreasureChest3"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1.26316, 0, 0, 0.592857, 0, 12.75 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreasureChest3/Area2D"]
+
+transform/pos = Vector2( 0, 12.75 )
+transform/scale = Vector2( 1.26316, 0.592857 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SamplePlayer" type="SamplePlayer" parent="TreasureChest3"]
+
+config/polyphony = 1
+config/samples = SubResource( 3 )
+default/volume_db = 0.0
+default/pitch_scale = 1.0
+default/pan = 0.0
+default/depth = 0.0
+default/height = 0.0
+default/filter/type = 0
+default/filter/cutoff = 5000.0
+default/filter/resonance = 1.0
+default/filter/gain = 1.0
+default/reverb_room = 2
+default/reverb_send = 0.0
+default/chorus_send = 0.0
+
+[node name="Label" type="Label" parent="TreasureChest3"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -96.0
+margin/top = -160.0
+margin/right = 128.0
+margin/bottom = -96.0
+custom_fonts/font = ExtResource( 7 )
+text = "You got a pick."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="TreasureChest1" type="Node2D" parent="."]
 
 editor/display_folded = true
 transform/pos = Vector2( 320, -512 )
 transform/scale = Vector2( 0.5, 0.5 )
-script/script = ExtResource( 9 )
+z/z = 1
+script/script = ExtResource( 11 )
 
 [node name="SpriteClosed" type="Sprite" parent="TreasureChest1"]
 
@@ -284,8 +457,9 @@ flip_h = true
 
 [node name="Area2D" type="Area2D" parent="TreasureChest1"]
 
+editor/display_folded = true
 input/pickable = true
-shapes/0/shape = SubResource( 3 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 1.26316, 0, 0, 0.592857, 0, 12.75 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -300,7 +474,7 @@ __meta__ = {
 
 transform/pos = Vector2( 0, 12.75 )
 transform/scale = Vector2( 1.26316, 0.592857 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -310,7 +484,7 @@ __meta__ = {
 [node name="SamplePlayer" type="SamplePlayer" parent="TreasureChest1"]
 
 config/polyphony = 1
-config/samples = SubResource( 4 )
+config/samples = SubResource( 3 )
 default/volume_db = 0.0
 default/pitch_scale = 1.0
 default/pan = 0.0
@@ -324,12 +498,31 @@ default/reverb_room = 2
 default/reverb_send = 0.0
 default/chorus_send = 0.0
 
+[node name="Label" type="Label" parent="TreasureChest1"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -192.0
+margin/top = -96.0
+margin/right = 128.0
+margin/bottom = -32.0
+custom_fonts/font = ExtResource( 7 )
+text = "You got diving goggles."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="ObstaclePlantRoot" type="Node2D" parent="."]
 
 editor/display_folded = true
 transform/pos = Vector2( 224, -112 )
 transform/scale = Vector2( 0.5, 1.5 )
-script/script = ExtResource( 10 )
+script/script = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="ObstaclePlantRoot"]
 
@@ -338,26 +531,24 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = -320.0
-margin/top = -20.0
-margin/right = -61.0
-margin/bottom = -6.0
+margin/left = -544.0
+margin/top = -21.0
+margin/right = -89.0
+margin/bottom = 5.0
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "I can't  remove the plant root. "
+text = "I can't  remove these plant roots. "
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Sprite" type="Sprite" parent="ObstaclePlantRoot"]
 
-transform/pos = Vector2( -1.14441e-05, 1.14441e-05 )
-transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 11 )
+transform/pos = Vector2( -1.14441e-05, 1.90735e-06 )
+transform/scale = Vector2( 2, 0.666667 )
+texture = ExtResource( 13 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -366,10 +557,9 @@ __meta__ = {
 
 editor/display_folded = true
 transform/pos = Vector2( 1.62125e-05, 1.14441e-05 )
-transform/scale = Vector2( 1, 1 )
 input/pickable = true
-shapes/0/shape = SubResource( 5 )
-shapes/0/transform = Matrix32( 0.914286, 0, 0, 0.842106, -2.39611e-05, -1.52588e-05 )
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 0.457143, 0, 0, 0.520325, -64, -1.62125e-05 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -381,9 +571,9 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObstaclePlantRoot/Area2D"]
 
-transform/pos = Vector2( -2.39611e-05, -1.52588e-05 )
-transform/scale = Vector2( 0.914286, 0.842106 )
-shape = SubResource( 5 )
+transform/pos = Vector2( -64, -1.62125e-05 )
+transform/scale = Vector2( 0.457143, 0.520325 )
+shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -394,10 +584,9 @@ __meta__ = {
 
 editor/display_folded = true
 transform/pos = Vector2( 1.28746e-05, -1.14441e-05 )
-transform/scale = Vector2( 1, 1 )
 input/pickable = false
-shapes/0/shape = SubResource( 5 )
-shapes/0/transform = Matrix32( 0.842105, 0, 0, 0.780488, -2.47955e-05, 1.71661e-05 )
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Matrix32( 0.842105, 0, 0, 0.520325, -2.47955e-05, 1.43051e-05 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -411,9 +600,347 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObstaclePlantRoot/StaticBody2D"]
 
-transform/pos = Vector2( -2.47955e-05, 1.71661e-05 )
-transform/scale = Vector2( 0.842105, 0.780488 )
-shape = SubResource( 5 )
+transform/pos = Vector2( -2.47955e-05, 1.43051e-05 )
+transform/scale = Vector2( 0.842105, 0.520325 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ObstacleStones" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 208, -304 )
+transform/scale = Vector2( 0.5, 1 )
+script/script = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="ObstacleStones"]
+
+transform/pos = Vector2( -1.52588e-05, 0 )
+transform/scale = Vector2( 2, 1 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="ObstacleStones"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Matrix32( 5.89102, 0, 0, 2.23077, 64, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleStones/Area2D"]
+
+transform/pos = Vector2( 64, 0 )
+transform/scale = Vector2( 5.89102, 2.23077 )
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleStones"]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 11 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2, -4.76837e-06, 4.29153e-06 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleStones/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 4.29153e-06 )
+transform/scale = Vector2( 2.46154, 2 )
+shape = SubResource( 11 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="ObstacleStones"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -224.0
+margin/top = -96.0
+margin/right = 166.0
+margin/bottom = -70.0
+custom_fonts/font = ExtResource( 7 )
+text = "I can't  remove these stones. "
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ObstacleWaterfall" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -944, -128 )
+transform/scale = Vector2( 1.5, 0.5 )
+script/script = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="ObstacleWaterfall"]
+
+transform/pos = Vector2( -3.05176e-05, 0 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleWaterfall"]
+
+editor/display_folded = true
+input/pickable = false
+shapes/0/shape = SubResource( 13 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, -64 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleWaterfall/StaticBody2D"]
+
+transform/pos = Vector2( 0, -64 )
+shape = SubResource( 13 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="ObstacleWaterfall"]
+
+editor/display_folded = true
+input/pickable = true
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 64, -160 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleWaterfall/Area2D"]
+
+transform/pos = Vector2( 64, -160 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="ObstacleWaterfall"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 32.0
+margin/top = -288.0
+margin/right = 224.0
+margin/bottom = -96.0
+custom_fonts/font = ExtResource( 7 )
+text = "I don't jump down there without diving goggles."
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Tunnel" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1632, -320 )
+transform/scale = Vector2( 0.5, 0.5 )
+script/script = ExtResource( 18 )
+
+[node name="Sprite" type="Sprite" parent="Tunnel"]
+
+transform/pos = Vector2( -0.00012207, 7.62939e-06 )
+transform/scale = Vector2( 1.99999, 2 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="Tunnel"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Matrix32( 0.457143, 0, 0, 2, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tunnel/Area2D"]
+
+transform/scale = Vector2( 0.457143, 2 )
+shape = SubResource( 12 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ObstacleCork" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -2032, -480 )
+transform/scale = Vector2( 4.5, 0.5 )
+script/script = ExtResource( 20 )
+
+[node name="Sprite" type="Sprite" parent="ObstacleCork"]
+
+transform/pos = Vector2( -24.8889, 224 )
+transform/scale = Vector2( 0.333334, 2 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ObstacleCork"]
+
+transform/pos = Vector2( -24.8889, 248 )
+transform/scale = Vector2( 1.33333, 6.25 )
+input/pickable = false
+shapes/0/shape = SubResource( 9 )
+shapes/0/transform = Matrix32( 2.39744, 0, 0, 2.24, -1.0256, -3.83999 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleCork/StaticBody2D"]
+
+transform/pos = Vector2( -1.0256, -3.83999 )
+transform/scale = Vector2( 2.39744, 2.24 )
+shape = SubResource( 9 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="ObstacleCork"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 15 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 24.8889, 288 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObstacleCork/Area2D"]
+
+transform/pos = Vector2( 24.8889, 288 )
+shape = SubResource( 15 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="ObstacleCork"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 18.0
+margin/top = -32.0
+margin/right = 75.0
+margin/bottom = 608.0
+custom_fonts/font = ExtResource( 7 )
+text = "I can't push the cork."
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Exit" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -2448, -224 )
+transform/scale = Vector2( 8.25, 1 )
+script/script = ExtResource( 22 )
+
+[node name="Area2D" type="Area2D" parent="Exit"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 2.67741, 0, 0, 1, -5.64626, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit/Area2D"]
+
+transform/pos = Vector2( -5.64626, 0 )
+transform/scale = Vector2( 2.67741, 1 )
+shape = SubResource( 16 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -430,7 +957,7 @@ transform/scale = Vector2( 19, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -439,7 +966,7 @@ __meta__ = {
 
 editor/display_folded = true
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -456,7 +983,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -473,7 +1000,7 @@ transform/scale = Vector2( 6.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -481,7 +1008,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground1"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -499,7 +1026,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -516,7 +1043,7 @@ transform/scale = Vector2( 0.499999, 8 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -524,7 +1051,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground2"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -542,7 +1069,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -559,7 +1086,7 @@ transform/scale = Vector2( 0.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -567,7 +1094,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground9"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -585,7 +1112,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -602,7 +1129,7 @@ transform/scale = Vector2( 0.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -610,7 +1137,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground18"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -628,7 +1155,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -645,7 +1172,7 @@ transform/scale = Vector2( 0.5, 0.75 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -653,7 +1180,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground19"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -671,7 +1198,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -688,7 +1215,7 @@ transform/scale = Vector2( 0.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -696,7 +1223,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground21"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -714,7 +1241,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -731,7 +1258,7 @@ transform/scale = Vector2( 0.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -739,7 +1266,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground37"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -757,7 +1284,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -774,7 +1301,7 @@ transform/scale = Vector2( 0.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -782,7 +1309,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground22"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -800,7 +1327,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -817,7 +1344,7 @@ transform/scale = Vector2( 0.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -825,7 +1352,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground23"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -843,7 +1370,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -860,7 +1387,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -868,7 +1395,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground26"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -886,7 +1413,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -903,7 +1430,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -911,7 +1438,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground28"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -929,7 +1456,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -946,7 +1473,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -954,7 +1481,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground29"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -972,7 +1499,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -989,7 +1516,7 @@ transform/scale = Vector2( 0.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -997,7 +1524,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground27"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1015,7 +1542,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1032,7 +1559,7 @@ transform/scale = Vector2( 0.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1040,7 +1567,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground24"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1058,7 +1585,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1075,7 +1602,7 @@ transform/scale = Vector2( 2.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1083,7 +1610,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground20"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1101,7 +1628,93 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground49" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -624, -160 )
+transform/scale = Vector2( 4, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground49"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground49"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground49/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground75" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -512, -192 )
+transform/scale = Vector2( 0.500001, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground75"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground75"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground75/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1118,7 +1731,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1126,7 +1739,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground3"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1143,7 +1756,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1160,7 +1773,7 @@ transform/scale = Vector2( 12.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1168,7 +1781,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground5"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1185,7 +1798,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1202,7 +1815,7 @@ transform/scale = Vector2( 9, 1 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1210,7 +1823,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground43"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1227,7 +1840,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1244,7 +1857,7 @@ transform/scale = Vector2( 7.5, 1.25 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1252,7 +1865,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground44"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1269,7 +1882,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1286,7 +1899,7 @@ transform/scale = Vector2( 4.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1294,7 +1907,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground40"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1311,7 +1924,385 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground51" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1328, 0 )
+transform/scale = Vector2( 1.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground51"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground51"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground51/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground53" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1168, -64 )
+transform/scale = Vector2( 1.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground53"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground53"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground53/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground54" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1328, -128 )
+transform/scale = Vector2( 1.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground54"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground54"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground54/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground55" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1168, -192 )
+transform/scale = Vector2( 1.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground55"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground55"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground55/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground57" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1344, -240 )
+transform/scale = Vector2( 0.999999, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground57"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground57"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground57/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground59" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1264, -272 )
+transform/scale = Vector2( 0.499997, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground59"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground59"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground59/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground58" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1360, -208 )
+transform/scale = Vector2( 0.499997, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground58"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground58"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground58/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground56" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1328, -288 )
+transform/scale = Vector2( 1.5, 1 )
+
+[node name="Sprite" type="Sprite" parent="Ground56"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground56"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground56/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground52" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1360, -32 )
+transform/scale = Vector2( 0.499999, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground52"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground52"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground52/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1328,7 +2319,7 @@ transform/scale = Vector2( 6.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1336,7 +2327,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground8"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1353,7 +2344,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1370,7 +2361,7 @@ transform/scale = Vector2( 4.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1378,7 +2369,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground11"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1395,7 +2386,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1412,7 +2403,7 @@ transform/scale = Vector2( 3.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1420,7 +2411,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground14"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1437,7 +2428,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1454,7 +2445,7 @@ transform/scale = Vector2( 4, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1462,7 +2453,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground17"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1479,7 +2470,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1496,7 +2487,7 @@ transform/scale = Vector2( 17, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1504,7 +2495,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground16"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1521,7 +2512,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1538,7 +2529,7 @@ transform/scale = Vector2( 9, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1546,7 +2537,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground36"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1563,7 +2554,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1580,7 +2571,7 @@ transform/scale = Vector2( 9.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1588,7 +2579,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground30"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1605,7 +2596,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1622,7 +2613,7 @@ transform/scale = Vector2( 0.999999, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1630,7 +2621,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground38"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1647,7 +2638,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1657,14 +2648,14 @@ __meta__ = {
 [node name="Ground46" type="Node2D" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( -1800, -480 )
-transform/scale = Vector2( 2.75, 0.5 )
+transform/pos = Vector2( -1696, -480 )
+transform/scale = Vector2( 6, 0.5 )
 
 [node name="Sprite" type="Sprite" parent="Ground46"]
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 25 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1672,7 +2663,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground46"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1689,7 +2680,179 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground64" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1664, -512 )
+transform/scale = Vector2( 5, 0.5 )
+z/z = 1
+
+[node name="Sprite" type="Sprite" parent="Ground64"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground64"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground64/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground65" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1652, -544 )
+transform/scale = Vector2( 3.625, 0.5 )
+z/z = 1
+
+[node name="Sprite" type="Sprite" parent="Ground65"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground65"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground65/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground66" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1632, -576 )
+transform/scale = Vector2( 2, 0.5 )
+z/z = 1
+
+[node name="Sprite" type="Sprite" parent="Ground66"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground66"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground66/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground67" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1616, -608 )
+transform/scale = Vector2( 0.499998, 0.5 )
+z/z = 1
+
+[node name="Sprite" type="Sprite" parent="Ground67"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground67"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground67/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1706,7 +2869,7 @@ transform/scale = Vector2( 2.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1714,7 +2877,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground31"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1731,7 +2894,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1748,7 +2911,7 @@ transform/scale = Vector2( 1, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1756,7 +2919,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground32"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1773,7 +2936,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1790,7 +2953,7 @@ transform/scale = Vector2( 2, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1798,7 +2961,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground33"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1815,7 +2978,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1832,7 +2995,7 @@ transform/scale = Vector2( 1, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1840,7 +3003,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground34"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1857,7 +3020,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1874,7 +3037,7 @@ transform/scale = Vector2( 1, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 13 )
+texture = ExtResource( 24 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1882,7 +3045,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground35"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1899,7 +3062,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1916,7 +3079,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1924,7 +3087,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground25"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1941,7 +3104,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1951,14 +3114,14 @@ __meta__ = {
 [node name="Ground45" type="Node2D" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( -1536, -416 )
-transform/scale = Vector2( 13, 0.5 )
+transform/pos = Vector2( -1512, -416 )
+transform/scale = Vector2( 13.75, 0.5 )
 
 [node name="Sprite" type="Sprite" parent="Ground45"]
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1966,7 +3129,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground45"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -1983,7 +3146,427 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground60" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1664, -336 )
+transform/scale = Vector2( 0.499999, 2 )
+
+[node name="Sprite" type="Sprite" parent="Ground60"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground60"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground60/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground61" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1584, -288 )
+transform/scale = Vector2( 2, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground61"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground61"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground61/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground70" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1664, -160 )
+transform/scale = Vector2( 1, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground70"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground70"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground70/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground71" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1712, -192 )
+transform/scale = Vector2( 1.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground71"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground71"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground71/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground74" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1456, -224 )
+transform/scale = Vector2( 0.499999, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground74"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground74"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground74/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground72" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1776, -224 )
+transform/scale = Vector2( 1.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground72"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground72"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground72/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground73" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1840, -256 )
+transform/scale = Vector2( 1.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground73"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground73"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground73/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground62" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1504, -144 )
+transform/scale = Vector2( 2, 2 )
+
+[node name="Sprite" type="Sprite" parent="Ground62"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground62"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground62/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground69" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1600, -144 )
+transform/scale = Vector2( 0.999999, 1 )
+
+[node name="Sprite" type="Sprite" parent="Ground69"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground69"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground69/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground63" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1472, -64 )
+transform/scale = Vector2( 0.999999, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground63"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground63"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground63/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -1993,14 +3576,14 @@ __meta__ = {
 [node name="Ground47" type="Node2D" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( -1816, -448 )
-transform/scale = Vector2( 4.25, 0.5 )
+transform/pos = Vector2( -1712, -448 )
+transform/scale = Vector2( 7.5, 0.5 )
 
 [node name="Sprite" type="Sprite" parent="Ground47"]
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2008,7 +3591,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground47"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2025,7 +3608,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2042,7 +3625,7 @@ transform/scale = Vector2( 1.5, 1.75 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2050,7 +3633,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground41"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2067,7 +3650,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2084,7 +3667,7 @@ transform/scale = Vector2( 1, 1.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2092,7 +3675,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground42"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2109,7 +3692,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2126,7 +3709,7 @@ transform/scale = Vector2( 1, 6 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2134,7 +3717,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground39"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2151,7 +3734,91 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground68" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1488, -480 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Ground68"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground68"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground68/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ground50" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1408, -168 )
+transform/scale = Vector2( 1, 4.75 )
+
+[node name="Sprite" type="Sprite" parent="Ground50"]
+
+transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Ground50"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground50/StaticBody2D"]
+
+transform/pos = Vector2( -4.76837e-06, 0 )
+transform/scale = Vector2( 2.46154, 2.46154 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2168,7 +3835,7 @@ transform/scale = Vector2( 1, 2.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2176,7 +3843,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground48"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2193,7 +3860,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2210,7 +3877,7 @@ transform/scale = Vector2( 2, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2218,7 +3885,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground12"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2235,7 +3902,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2252,7 +3919,7 @@ transform/scale = Vector2( 1, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2260,7 +3927,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground13"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2277,7 +3944,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2294,7 +3961,7 @@ transform/scale = Vector2( 0.5, 1.25 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2302,7 +3969,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground15"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2319,7 +3986,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2336,7 +4003,7 @@ transform/scale = Vector2( 2.25, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2344,7 +4011,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground6"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2361,7 +4028,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2378,7 +4045,7 @@ transform/scale = Vector2( 2, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2386,7 +4053,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground7"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2403,7 +4070,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2420,7 +4087,7 @@ transform/scale = Vector2( 0.5, 0.5 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2428,7 +4095,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground4"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2445,7 +4112,7 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 __meta__ = {
@@ -2462,7 +4129,7 @@ transform/scale = Vector2( 0.5, 1.25 )
 
 transform/pos = Vector2( 1.52588e-05, 9.53674e-07 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 12 )
+texture = ExtResource( 23 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2470,7 +4137,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Ground10"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 6 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.46154, -4.76837e-06, 0 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2487,37 +4154,9 @@ __meta__ = {
 
 transform/pos = Vector2( -4.76837e-06, 0 )
 transform/scale = Vector2( 2.46154, 2.46154 )
-shape = SubResource( 6 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Water2" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( -944, -128 )
-transform/scale = Vector2( 1.5, 0.5 )
-
-[node name="Sprite" type="Sprite" parent="Water2"]
-
-transform/pos = Vector2( -3.05176e-05, 0 )
-transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Water2"]
-
-input/pickable = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2532,7 +4171,7 @@ transform/scale = Vector2( 0.999999, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2560,7 +4199,7 @@ transform/scale = Vector2( 0.999999, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2588,7 +4227,7 @@ transform/scale = Vector2( 0.999999, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2616,7 +4255,7 @@ transform/scale = Vector2( 0.999999, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2644,7 +4283,7 @@ transform/scale = Vector2( 0.999999, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2672,7 +4311,7 @@ transform/scale = Vector2( 0.999999, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2700,7 +4339,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2728,7 +4367,7 @@ transform/scale = Vector2( 0.499999, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2748,6 +4387,7 @@ __meta__ = {
 
 [node name="Water21" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -976, -160 )
 transform/scale = Vector2( 0.499999, 0.5 )
 
@@ -2755,7 +4395,7 @@ transform/scale = Vector2( 0.499999, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2775,15 +4415,16 @@ __meta__ = {
 
 [node name="Water11" type="Node2D" parent="."]
 
-transform/pos = Vector2( -1368, -480 )
-transform/scale = Vector2( 10.75, 0.5 )
+editor/display_folded = true
+transform/pos = Vector2( -1248, -480 )
+transform/scale = Vector2( 7, 0.5 )
 z/z = 3
 
 [node name="Sprite" type="Sprite" parent="Water11"]
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2791,7 +4432,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Water11"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 10 )
+shapes/0/shape = SubResource( 6 )
 shapes/0/transform = Matrix32( 2.46154, 0, 0, 3.7, -0.744186, 32 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -2808,20 +4449,24 @@ __meta__ = {
 
 transform/pos = Vector2( -0.744186, 32 )
 transform/scale = Vector2( 2.46154, 3.7 )
-shape = SubResource( 10 )
+shape = SubResource( 6 )
 trigger = false
 _update_shape_index = 0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Water12" type="Node2D" parent="."]
 
-transform/pos = Vector2( -1352, -448 )
-transform/scale = Vector2( 10.25, 0.5 )
+editor/display_folded = true
+transform/pos = Vector2( -1248, -448 )
+transform/scale = Vector2( 7, 0.5 )
 
 [node name="Sprite" type="Sprite" parent="Water12"]
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2849,7 +4494,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2877,7 +4522,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2905,7 +4550,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2933,7 +4578,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2953,6 +4598,7 @@ __meta__ = {
 
 [node name="Water10" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( -928, 32 )
 transform/scale = Vector2( 3, 0.5 )
 z/z = 3
@@ -2961,7 +4607,7 @@ z/z = 3
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3003,7 +4649,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3043,7 +4689,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3075,6 +4721,7 @@ __meta__ = {
 
 [node name="Water9" type="Node2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 48, -544 )
 transform/scale = Vector2( 1.5, 0.5 )
 z/z = 3
@@ -3083,7 +4730,7 @@ z/z = 3
 
 transform/pos = Vector2( -3.05176e-05, 0 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 14 )
+texture = ExtResource( 17 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3120,12 +4767,13 @@ __meta__ = {
 editor/display_folded = true
 transform/pos = Vector2( -544, -512 )
 transform/scale = Vector2( 0.5, 0.5 )
+z/z = 1
 
 [node name="Sprite" type="Sprite" parent="Bush"]
 
 transform/pos = Vector2( 1.52588e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 15 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3135,12 +4783,13 @@ __meta__ = {
 editor/display_folded = true
 transform/pos = Vector2( -528, -512 )
 transform/scale = Vector2( 0.5, 0.5 )
+z/z = 1
 
 [node name="Sprite" type="Sprite" parent="Bush1"]
 
 transform/pos = Vector2( 1.52588e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 15 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3150,12 +4799,13 @@ __meta__ = {
 editor/display_folded = true
 transform/pos = Vector2( -224, -512 )
 transform/scale = Vector2( 0.5, 0.5 )
+z/z = 1
 
 [node name="Sprite" type="Sprite" parent="Bush2"]
 
 transform/pos = Vector2( 1.52588e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 15 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3165,12 +4815,13 @@ __meta__ = {
 editor/display_folded = true
 transform/pos = Vector2( 160, -576 )
 transform/scale = Vector2( 0.5, 0.5 )
+z/z = 1
 
 [node name="Sprite" type="Sprite" parent="Bush3"]
 
 transform/pos = Vector2( 1.52588e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 15 )
+texture = ExtResource( 26 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3185,7 +4836,7 @@ transform/scale = Vector2( 0.5, 14 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3227,7 +4878,7 @@ transform/scale = Vector2( 27, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3269,7 +4920,7 @@ transform/scale = Vector2( 27, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3311,7 +4962,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3353,7 +5004,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3395,7 +5046,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3437,7 +5088,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3479,7 +5130,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3521,7 +5172,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3563,7 +5214,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3605,7 +5256,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3647,7 +5298,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3689,7 +5340,7 @@ transform/scale = Vector2( 4.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3731,7 +5382,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3763,41 +5414,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Cork" type="Node2D" parent="."]
-
-editor/display_folded = true
-transform/pos = Vector2( -2032, -480 )
-transform/scale = Vector2( 4.5, 0.5 )
-
-[node name="Sprite" type="Sprite" parent="Cork"]
-
-transform/pos = Vector2( -24.8889, 224 )
-transform/scale = Vector2( 0.333334, 2 )
-texture = ExtResource( 17 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Cork"]
-
-transform/pos = Vector2( -24.8889, 248 )
-transform/scale = Vector2( 1.33333, 6.25 )
-input/pickable = false
-shapes/0/shape = SubResource( 9 )
-shapes/0/transform = Matrix32( 2.46154, 0, 0, 2.36308, -4.76837e-06, 1.28 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cork/StaticBody2D"]
-
-transform/pos = Vector2( -4.76837e-06, 1.28 )
-transform/scale = Vector2( 2.46154, 2.36308 )
-shape = SubResource( 9 )
-trigger = false
-_update_shape_index = 0
-
 [node name="Glas9" type="Node2D" parent="."]
 
 editor/display_folded = true
@@ -3808,7 +5424,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3850,7 +5466,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3892,7 +5508,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3934,7 +5550,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -3976,7 +5592,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -4018,7 +5634,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -4060,7 +5676,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -4102,7 +5718,7 @@ transform/scale = Vector2( 1.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -4144,7 +5760,7 @@ transform/scale = Vector2( 4.5, 0.5 )
 
 transform/pos = Vector2( 1.7643e-05, -1.52588e-05 )
 transform/scale = Vector2( 2, 2 )
-texture = ExtResource( 16 )
+texture = ExtResource( 27 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -4175,5 +5791,212 @@ _update_shape_index = 0
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Sky" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -464, -672 )
+transform/scale = Vector2( 26.5, 3.5 )
+
+[node name="Sprite" type="Sprite" parent="Sky"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky1" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 320, -528 )
+transform/scale = Vector2( 2, 1 )
+
+[node name="Sprite" type="Sprite" parent="Sky1"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky3" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -800, -528 )
+transform/scale = Vector2( 22, 1 )
+
+[node name="Sprite" type="Sprite" parent="Sky3"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky4" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1440, -624 )
+transform/scale = Vector2( 4, 1 )
+
+[node name="Sprite" type="Sprite" parent="Sky4"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky5" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1440, -576 )
+transform/scale = Vector2( 4, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Sky5"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky6" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1520, -544 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Sky6"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky7" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1584, -608 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Sky7"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky8" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1408, -672 )
+transform/scale = Vector2( 3, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Sky8"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky9" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1376, -704 )
+transform/scale = Vector2( 2, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Sky9"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky10" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -1344, -736 )
+transform/scale = Vector2( 1, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Sky10"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky2" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( 240, -544 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Sky2"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sky11" type="Node2D" parent="."]
+
+editor/display_folded = true
+transform/pos = Vector2( -80, -544 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Sky11"]
+
+transform/pos = Vector2( 7.62939e-06, -7.62939e-06 )
+transform/scale = Vector2( 2, 2 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+transform/pos = Vector2( -720, -272 )
+anchor_mode = 1
+rotating = false
+current = false
+zoom = Vector2( 8, 4 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = false
+autostart = false
 
 

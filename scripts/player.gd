@@ -45,6 +45,8 @@ func _process(delta):
 	elif Input.is_action_pressed("ui_right"):
 		input_direction = STEP_SIZE
 		sprite_node.set_flip_h(false)
+	elif Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://Menu.tscn")
 	else:
 		input_direction = 0
 	

@@ -21,7 +21,8 @@ func _collect_item(body):
 		sprite_node_closed.set_hidden(true)
 		sprite_node_open.set_hidden(false)
 		sample_player.play("pick_up", true)
-		print(get_owner().items_collected)
+		get_node("Label").set_hidden(false)
+		
 
 func _get_item():
 	return null
