@@ -4,7 +4,7 @@ func _ready():
 	get_node("Area2D").connect("body_enter", self, "_remove")
 	
 func _remove(body):
-	if get_owner().items_collected.has("axt"):
+	if get_owner().items_collected.has("battering_ram"):
 		get_node("Label").set_hidden(true)
 		queue_free()
 	else:
