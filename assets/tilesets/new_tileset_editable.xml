@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="PackedScene" subresource_count="38" version="2.1" version_name="Godot Engine v2.1.3.stable.official">
+	<ext_resource path="res://assets/textures/gras_2.tex" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://assets/textures/waterfall_mouth_frame_1.tex" type="Texture" index="15"></ext_resource>
+	<ext_resource path="res://assets/canvas-item-materials/waterfall_mouth_canvas_item_material.xml" type="CanvasItemMaterial" index="14"></ext_resource>
+	<ext_resource path="res://assets/canvas-item-materials/waterfall_canvas_item_material.xml" type="CanvasItemMaterial" index="12"></ext_resource>
+	<ext_resource path="res://assets/canvas-item-materials/waterfall_spring_canvas_item_material.xml" type="CanvasItemMaterial" index="16"></ext_resource>
+	<ext_resource path="res://assets/textures/waterfall_frame_1.tex" type="Texture" index="13"></ext_resource>
+	<ext_resource path="res://assets/textures/waterfall_spring_frame_1.tex" type="Texture" index="17"></ext_resource>
+	<ext_resource path="res://assets/textures/earth_2.tex" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://assets/textures/water_top.tex" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://assets/textures/water_deep.tex" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://assets/textures/montain_2.tex" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://assets/textures/sunshine.tex" type="Texture" index="19"></ext_resource>
+	<ext_resource path="res://assets/textures/sunshine-big.tex" type="Texture" index="20"></ext_resource>
+	<ext_resource path="res://assets/textures/sunshine-thin.tex" type="Texture" index="21"></ext_resource>
+	<ext_resource path="res://assets/textures/wooden_platform.tex" type="Texture" index="18"></ext_resource>
+	<ext_resource path="res://assets/textures/tree_1.tex" type="Texture" index="22"></ext_resource>
+	<ext_resource path="res://assets/textures/tree_2.tex" type="Texture" index="23"></ext_resource>
+	<ext_resource path="res://assets/textures/water_top_sunshine.tex" type="Texture" index="8"></ext_resource>
+	<ext_resource path="res://assets/textures/water_top_sunshine-thin.tex" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://assets/textures/water_top_sunshine-big.tex" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://assets/textures/sky.tex" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://assets/textures/glas_2.tex" type="Texture" index="4"></ext_resource>
+	<ext_resource path="res://assets/textures/earth-bg.tex" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://assets/textures/water_2.tex" type="Texture" index="6"></ext_resource>
+	<ext_resource path="res://assets/textures/water_background.tex" type="Texture" index="24"></ext_resource>
+	<resource type="RectangleShape2D" path="local://1">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 16 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://2">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 16 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://3">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 16 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://4">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 16 </vector2>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://17">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			16, 8, 16, 16, -16, 16, -16, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://18">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, 8, 16, 8, 16, 16, -16, 16 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://19">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, 8, 16, 8, 16, 16, -16, 16 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://20">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, 8, 16, 8, 16, 16, -16, 16 </vector2_array>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://9">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 8 </vector2>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://10">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			16, -16, 16, -6, 12, -6, 12, -10 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://11">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, -16, 16, -16, 12, -10, -12, -10 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://12">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, -6, -16, -16, -12, -10, -12, -6 </vector2_array>
+
+	</resource>
+	<main_resource>
+		<dictionary name="_bundled" shared="false">
+			<string> "conn_count" </string>
+			<int> 0 </int>
+			<string> "conns" </string>
+			<int_array  len="0"> 				 </int_array>
+			<string> "editable_instances" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "names" </string>
+			<string_array  len="55">
+				<string> "Node" </string>
+				<string> "earth_2" </string>
+				<string> "editor/display_folded" </string>
+				<string> "transform/pos" </string>
+				<string> "texture" </string>
+				<string> "region" </string>
+				<string> "region_rect" </string>
+				<string> "Sprite" </string>
+				<string> "StaticBody2D" </string>
+				<string> "input/pickable" </string>
+				<string> "shapes/0/shape" </string>
+				<string> "shapes/0/transform" </string>
+				<string> "shapes/0/trigger" </string>
+				<string> "collision/layers" </string>
+				<string> "collision/mask" </string>
+				<string> "constant_linear_velocity" </string>
+				<string> "constant_angular_velocity" </string>
+				<string> "friction" </string>
+				<string> "bounce" </string>
+				<string> "CollisionShape2D" </string>
+				<string> "shape" </string>
+				<string> "trigger" </string>
+				<string> "_update_shape_index" </string>
+				<string> "gras_2" </string>
+				<string> "montain_2" </string>
+				<string> "earth-bg" </string>
+				<string> "glas_2" </string>
+				<string> "sky" </string>
+				<string> "water_2" </string>
+				<string> "water_top" </string>
+				<string> "CollisionPolygon2D" </string>
+				<string> "build_mode" </string>
+				<string> "polygon" </string>
+				<string> "shape_range" </string>
+				<string> "water_top_sunshine" </string>
+				<string> "water_top_sunshine-thin" </string>
+				<string> "water_top_sunshine-big" </string>
+				<string> "water_deep" </string>
+				<string> "waterfall_frame_1" </string>
+				<string> "material/material" </string>
+				<string> "waterfall_mouth_frame_1" </string>
+				<string> "waterfall_spring_frame_1" </string>
+				<string> "wooden_platform" </string>
+				<string> "shapes/1/shape" </string>
+				<string> "shapes/1/transform" </string>
+				<string> "shapes/1/trigger" </string>
+				<string> "shapes/2/shape" </string>
+				<string> "shapes/2/transform" </string>
+				<string> "shapes/2/trigger" </string>
+				<string> "sunshine" </string>
+				<string> "sunshine-big" </string>
+				<string> "sunshine-thin" </string>
+				<string> "tree_1" </string>
+				<string> "tree_2" </string>
+				<string> "water_background" </string>
+			</string_array>
+			<string> "node_count" </string>
+			<int> 43 </int>
+			<string> "node_paths" </string>
+			<array  len="0" shared="false">
+			</array>
+			<string> "nodes" </string>
+			<int_array  len="785"> 				-1, -1, 0, 0, -1, 0, 0, 0, 0, 7, 1, -1, 5, 2, 0, 3, 1, 4, 2, 5, 0, 6, 3, 0, 1, 0, 8, 8, -1, 10, 9, 4, 10, 5, 11, 6, 12, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 2, 0, 19, 19, -1, 3, 20, 5, 21, 4, 22, 11, 0, 0, 0, 7, 23, -1, 5, 2, 0, 3, 12, 4, 13, 5, 0, 6, 3, 0, 4, 0, 8, 8, -1, 10, 9, 4, 10, 14, 11, 6, 12, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 5, 0, 19, 19, -1, 3, 20, 14, 21, 4, 22, 11, 0, 0, 0, 7, 24, -1, 5, 2, 0, 3, 15, 4, 16, 5, 0, 6, 3, 0, 7, 0, 8, 8, -1, 10, 9, 4, 10, 17, 11, 6, 12, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 8, 0, 19, 19, -1, 3, 20, 17, 21, 4, 22, 11, 0, 0, 0, 7, 25, -1, 4, 3, 18, 4, 19, 5, 0, 6, 3, 0, 0, 0, 7, 26, -1, 5, 2, 0, 3, 20, 4, 21, 5, 0, 6, 3, 0, 11, 0, 8, 8, -1, 10, 9, 4, 10, 22, 11, 6, 12, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 12, 0, 19, 19, -1, 3, 20, 22, 21, 4, 22, 11, 0, 0, 0, 7, 27, -1, 4, 3, 23, 4, 24, 5, 0, 6, 3, 0, 0, 0, 7, 28, -1, 4, 3, 25, 4, 26, 5, 0, 6, 3, 0, 0, 0, 7, 29, -1, 5, 2, 0, 3, 27, 4, 28, 5, 0, 6, 3, 0, 16, 0, 8, 8, -1, 10, 9, 4, 10, 29, 11, 6, 12, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 17, 0, 30, 30, -1, 4, 31, 11, 32, 30, 33, 8, 21, 4, 0, 0, 0, 7, 34, -1, 5, 2, 0, 3, 31, 4, 32, 5, 0, 6, 3, 0, 19, 0, 8, 8, -1, 10, 9, 4, 10, 33, 11, 6, 12, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 20, 0, 30, 30, -1, 4, 31, 11, 32, 34, 33, 8, 21, 4, 0, 0, 0, 7, 35, -1, 5, 2, 0, 3, 35, 4, 36, 5, 0, 6, 3, 0, 22, 0, 8, 8, -1, 10, 9, 4, 10, 37, 11, 6, 12, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 23, 0, 30, 30, -1, 4, 31, 11, 32, 34, 33, 8, 21, 4, 0, 0, 0, 7, 36, -1, 5, 2, 0, 3, 38, 4, 39, 5, 0, 6, 3, 0, 25, 0, 8, 8, -1, 10, 9, 4, 10, 40, 11, 6, 12, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 26, 0, 30, 30, -1, 4, 31, 11, 32, 34, 33, 8, 21, 4, 0, 0, 0, 7, 37, -1, 4, 3, 41, 4, 42, 5, 0, 6, 3, 0, 0, 0, 7, 38, -1, 5, 39, 43, 3, 44, 4, 45, 5, 0, 6, 3, 0, 0, 0, 7, 40, -1, 6, 2, 0, 39, 46, 3, 47, 4, 48, 5, 0, 6, 3, 0, 30, 0, 8, 8, -1, 10, 9, 4, 10, 49, 11, 50, 12, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 31, 0, 19, 19, -1, 4, 3, 51, 20, 49, 21, 4, 22, 11, 0, 0, 0, 7, 41, -1, 5, 39, 52, 3, 53, 4, 54, 5, 0, 6, 3, 0, 0, 0, 7, 42, -1, 4, 3, 55, 4, 56, 5, 0, 6, 3, 0, 34, 0, 8, 8, -1, 16, 9, 4, 10, 57, 11, 6, 12, 4, 43, 58, 44, 6, 45, 4, 46, 59, 47, 6, 48, 4, 13, 7, 14, 7, 15, 8, 16, 9, 17, 10, 18, 9, 0, 35, 0, 30, 30, -1, 4, 31, 11, 32, 60, 33, 61, 21, 4, 0, 0, 0, 7, 49, -1, 4, 3, 62, 4, 63, 5, 0, 6, 3, 0, 0, 0, 7, 50, -1, 4, 3, 64, 4, 65, 5, 0, 6, 3, 0, 0, 0, 7, 51, -1, 4, 3, 66, 4, 67, 5, 0, 6, 3, 0, 0, 0, 7, 52, -1, 4, 3, 68, 4, 69, 5, 0, 6, 70, 0, 0, 0, 7, 53, -1, 4, 3, 71, 4, 72, 5, 0, 6, 70, 0, 0, 0, 7, 54, -1, 4, 3, 73, 4, 74, 5, 0, 6, 3, 0 </int_array>
+			<string> "variants" </string>
+			<array  len="75" shared="false">
+				<bool> True </bool>
+				<vector2> 16, 16 </vector2>
+				<resource  external="0">  </resource>
+				<rect2> 0, 0, 32, 32 </rect2>
+				<bool> False </bool>
+				<resource  resource_type="Shape2D" path="local://1">  </resource>
+				<matrix32> 1, 0, 0, 1, 0, 0 </matrix32>
+				<int> 1 </int>
+				<vector2> 0, 0 </vector2>
+				<real> 0 </real>
+				<real> 1 </real>
+				<int> 0 </int>
+				<vector2> 48, 16 </vector2>
+				<resource  external="1">  </resource>
+				<resource  resource_type="Shape2D" path="local://2">  </resource>
+				<vector2> 80, 16 </vector2>
+				<resource  external="2">  </resource>
+				<resource  resource_type="Shape2D" path="local://3">  </resource>
+				<vector2> 112, 16 </vector2>
+				<resource  external="3">  </resource>
+				<vector2> 16, 48 </vector2>
+				<resource  external="4">  </resource>
+				<resource  resource_type="Shape2D" path="local://4">  </resource>
+				<vector2> 48, 48 </vector2>
+				<resource  external="5">  </resource>
+				<vector2> 16, 80 </vector2>
+				<resource  external="6">  </resource>
+				<vector2> 48, 80 </vector2>
+				<resource  external="7">  </resource>
+				<resource  resource_type="Shape2D" path="local://17">  </resource>
+				<vector2_array  len="4"> 					16, 8, 16, 16, -16, 16, -16, 8 </vector2_array>
+				<vector2> 80, 80 </vector2>
+				<resource  external="8">  </resource>
+				<resource  resource_type="Shape2D" path="local://18">  </resource>
+				<vector2_array  len="4"> 					-16, 8, 16, 8, 16, 16, -16, 16 </vector2_array>
+				<vector2> 112, 80 </vector2>
+				<resource  external="9">  </resource>
+				<resource  resource_type="Shape2D" path="local://19">  </resource>
+				<vector2> 144, 80 </vector2>
+				<resource  external="10">  </resource>
+				<resource  resource_type="Shape2D" path="local://20">  </resource>
+				<vector2> 176, 80 </vector2>
+				<resource  external="11">  </resource>
+				<resource  external="12">  </resource>
+				<vector2> 208, 80 </vector2>
+				<resource  external="13">  </resource>
+				<resource  external="14">  </resource>
+				<vector2> 240, 80 </vector2>
+				<resource  external="15">  </resource>
+				<resource  resource_type="Shape2D" path="local://9">  </resource>
+				<matrix32> 1, -0, 0, 1, 0, 8 </matrix32>
+				<vector2> 0, 8 </vector2>
+				<resource  external="16">  </resource>
+				<vector2> 272, 80 </vector2>
+				<resource  external="17">  </resource>
+				<vector2> 80, 48 </vector2>
+				<resource  external="18">  </resource>
+				<resource  resource_type="Shape2D" path="local://10">  </resource>
+				<resource  resource_type="Shape2D" path="local://11">  </resource>
+				<resource  resource_type="Shape2D" path="local://12">  </resource>
+				<vector2_array  len="8"> 					-16, -16, 16, -16, 16, -6, 12, -6, 12, -10, -12, -10, -12, -6, -16, -6 </vector2_array>
+				<vector2> 0, 2 </vector2>
+				<vector2> 16, 112 </vector2>
+				<resource  external="19">  </resource>
+				<vector2> 48, 112 </vector2>
+				<resource  external="20">  </resource>
+				<vector2> 80, 112 </vector2>
+				<resource  external="21">  </resource>
+				<vector2> 48, 176 </vector2>
+				<resource  external="22">  </resource>
+				<rect2> 0, 0, 96, 96 </rect2>
+				<vector2> 144, 176 </vector2>
+				<resource  external="23">  </resource>
+				<vector2> 16, 254 </vector2>
+				<resource  external="24">  </resource>
+			</array>
+			<string> "version" </string>
+			<int> 2 </int>
+		</dictionary>
+
+	</main_resource>
+</resource_file>
