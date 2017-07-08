@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource_file type="TileSet" subresource_count="38" version="2.1" version_name="Godot Engine v2.1.3.stable.official">
+	<ext_resource path="res://assets/textures/gras_2.tex" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://assets/textures/waterfall_mouth_frame_1.tex" type="Texture" index="7"></ext_resource>
+	<ext_resource path="res://assets/canvas-item-materials/waterfall_mouth_canvas_item_material.xml" type="CanvasItemMaterial" index="6"></ext_resource>
+	<ext_resource path="res://assets/canvas-item-materials/waterfall_canvas_item_material.xml" type="CanvasItemMaterial" index="4"></ext_resource>
+	<ext_resource path="res://assets/canvas-item-materials/waterfall_spring_canvas_item_material.xml" type="CanvasItemMaterial" index="8"></ext_resource>
+	<ext_resource path="res://assets/textures/waterfall_frame_1.tex" type="Texture" index="5"></ext_resource>
+	<ext_resource path="res://assets/textures/waterfall_spring_frame_1.tex" type="Texture" index="9"></ext_resource>
+	<ext_resource path="res://assets/textures/earth_2.tex" type="Texture" index="0"></ext_resource>
+	<ext_resource path="res://assets/textures/water_top.tex" type="Texture" index="22"></ext_resource>
+	<ext_resource path="res://assets/textures/water_deep.tex" type="Texture" index="3"></ext_resource>
+	<ext_resource path="res://assets/textures/montain_2.tex" type="Texture" index="15"></ext_resource>
+	<ext_resource path="res://assets/textures/sunshine.tex" type="Texture" index="11"></ext_resource>
+	<ext_resource path="res://assets/textures/sunshine-big.tex" type="Texture" index="12"></ext_resource>
+	<ext_resource path="res://assets/textures/sunshine-thin.tex" type="Texture" index="13"></ext_resource>
+	<ext_resource path="res://assets/textures/wooden_platform.tex" type="Texture" index="10"></ext_resource>
+	<ext_resource path="res://assets/textures/tree_1.tex" type="Texture" index="14"></ext_resource>
+	<ext_resource path="res://assets/textures/tree_2.tex" type="Texture" index="16"></ext_resource>
+	<ext_resource path="res://assets/textures/water_top_sunshine.tex" type="Texture" index="23"></ext_resource>
+	<ext_resource path="res://assets/textures/water_top_sunshine-thin.tex" type="Texture" index="24"></ext_resource>
+	<ext_resource path="res://assets/textures/water_top_sunshine-big.tex" type="Texture" index="2"></ext_resource>
+	<ext_resource path="res://assets/textures/sky.tex" type="Texture" index="20"></ext_resource>
+	<ext_resource path="res://assets/textures/glas_2.tex" type="Texture" index="19"></ext_resource>
+	<ext_resource path="res://assets/textures/earth-bg.tex" type="Texture" index="18"></ext_resource>
+	<ext_resource path="res://assets/textures/water_2.tex" type="Texture" index="21"></ext_resource>
+	<ext_resource path="res://assets/textures/water_background.tex" type="Texture" index="17"></ext_resource>
+	<resource type="RectangleShape2D" path="local://1">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 16 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://2">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 16 </vector2>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://20">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, 8, 16, 8, 16, 16, -16, 16 </vector2_array>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://9">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 8 </vector2>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://10">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			16, -16, 16, -6, 12, -6, 12, -10 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://11">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, -16, 16, -16, 12, -10, -12, -10 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://12">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, -6, -16, -16, -12, -10, -12, -6 </vector2_array>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://3">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 16 </vector2>
+
+	</resource>
+	<resource type="RectangleShape2D" path="local://4">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2 name="extents"> 16, 16 </vector2>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://17">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			16, 8, 16, 16, -16, 16, -16, 8 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://18">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, 8, 16, 8, 16, 16, -16, 16 </vector2_array>
+
+	</resource>
+	<resource type="ConvexPolygonShape2D" path="local://19">
+		<real name="custom_solver_bias"> 0 </real>
+		<vector2_array name="points" len="4"> 			-16, 8, 16, 8, 16, 16, -16, 16 </vector2_array>
+
+	</resource>
+	<main_resource>
+		<string name="0/name"> "earth_2" </string>
+		<resource name="0/texture" external="0">  </resource>
+		<vector2 name="0/tex_offset"> 0, 0 </vector2>
+		<resource name="0/material"></resource>		<color name="0/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="0/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="0/occluder_offset"> 16, 16 </vector2>
+		<resource name="0/occluder"></resource>		<vector2 name="0/navigation_offset"> 16, 16 </vector2>
+		<resource name="0/navigation"></resource>		<vector2 name="0/shape_offset"> 16, 16 </vector2>
+		<array name="0/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://1">  </resource>
+		</array>
+		<string name="1/name"> "gras_2" </string>
+		<resource name="1/texture" external="1">  </resource>
+		<vector2 name="1/tex_offset"> 0, 0 </vector2>
+		<resource name="1/material"></resource>		<color name="1/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="1/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="1/occluder_offset"> 16, 16 </vector2>
+		<resource name="1/occluder"></resource>		<vector2 name="1/navigation_offset"> 16, 16 </vector2>
+		<resource name="1/navigation"></resource>		<vector2 name="1/shape_offset"> 16, 16 </vector2>
+		<array name="1/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://2">  </resource>
+		</array>
+		<string name="2/name"> "montain_2" </string>
+		<resource name="2/texture" external="15">  </resource>
+		<vector2 name="2/tex_offset"> 0, 0 </vector2>
+		<resource name="2/material"></resource>		<color name="2/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="2/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="2/occluder_offset"> 16, 16 </vector2>
+		<resource name="2/occluder"></resource>		<vector2 name="2/navigation_offset"> 16, 16 </vector2>
+		<resource name="2/navigation"></resource>		<vector2 name="2/shape_offset"> 16, 16 </vector2>
+		<array name="2/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://3">  </resource>
+		</array>
+		<string name="3/name"> "earth-bg" </string>
+		<resource name="3/texture" external="18">  </resource>
+		<vector2 name="3/tex_offset"> 0, 0 </vector2>
+		<resource name="3/material"></resource>		<color name="3/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="3/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="3/occluder_offset"> 16, 16 </vector2>
+		<resource name="3/occluder"></resource>		<vector2 name="3/navigation_offset"> 16, 16 </vector2>
+		<resource name="3/navigation"></resource>		<vector2 name="3/shape_offset"> 0, 0 </vector2>
+		<array name="3/shapes" len="0" shared="false">
+		</array>
+		<string name="4/name"> "glas_2" </string>
+		<resource name="4/texture" external="19">  </resource>
+		<vector2 name="4/tex_offset"> 0, 0 </vector2>
+		<resource name="4/material"></resource>		<color name="4/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="4/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="4/occluder_offset"> 16, 16 </vector2>
+		<resource name="4/occluder"></resource>		<vector2 name="4/navigation_offset"> 16, 16 </vector2>
+		<resource name="4/navigation"></resource>		<vector2 name="4/shape_offset"> 16, 16 </vector2>
+		<array name="4/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://4">  </resource>
+		</array>
+		<string name="5/name"> "sky" </string>
+		<resource name="5/texture" external="20">  </resource>
+		<vector2 name="5/tex_offset"> 0, 0 </vector2>
+		<resource name="5/material"></resource>		<color name="5/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="5/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="5/occluder_offset"> 16, 16 </vector2>
+		<resource name="5/occluder"></resource>		<vector2 name="5/navigation_offset"> 16, 16 </vector2>
+		<resource name="5/navigation"></resource>		<vector2 name="5/shape_offset"> 0, 0 </vector2>
+		<array name="5/shapes" len="0" shared="false">
+		</array>
+		<string name="6/name"> "water_2" </string>
+		<resource name="6/texture" external="21">  </resource>
+		<vector2 name="6/tex_offset"> 0, 0 </vector2>
+		<resource name="6/material"></resource>		<color name="6/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="6/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="6/occluder_offset"> 16, 16 </vector2>
+		<resource name="6/occluder"></resource>		<vector2 name="6/navigation_offset"> 16, 16 </vector2>
+		<resource name="6/navigation"></resource>		<vector2 name="6/shape_offset"> 0, 0 </vector2>
+		<array name="6/shapes" len="0" shared="false">
+		</array>
+		<string name="7/name"> "water_top" </string>
+		<resource name="7/texture" external="22">  </resource>
+		<vector2 name="7/tex_offset"> 0, 0 </vector2>
+		<resource name="7/material"></resource>		<color name="7/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="7/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="7/occluder_offset"> 16, 16 </vector2>
+		<resource name="7/occluder"></resource>		<vector2 name="7/navigation_offset"> 16, 16 </vector2>
+		<resource name="7/navigation"></resource>		<vector2 name="7/shape_offset"> 16, 16 </vector2>
+		<array name="7/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://17">  </resource>
+		</array>
+		<string name="8/name"> "water_top_sunshine" </string>
+		<resource name="8/texture" external="23">  </resource>
+		<vector2 name="8/tex_offset"> 0, 0 </vector2>
+		<resource name="8/material"></resource>		<color name="8/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="8/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="8/occluder_offset"> 16, 16 </vector2>
+		<resource name="8/occluder"></resource>		<vector2 name="8/navigation_offset"> 16, 16 </vector2>
+		<resource name="8/navigation"></resource>		<vector2 name="8/shape_offset"> 16, 16 </vector2>
+		<array name="8/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://18">  </resource>
+		</array>
+		<string name="9/name"> "water_top_sunshine-thin" </string>
+		<resource name="9/texture" external="24">  </resource>
+		<vector2 name="9/tex_offset"> 0, 0 </vector2>
+		<resource name="9/material"></resource>		<color name="9/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="9/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="9/occluder_offset"> 16, 16 </vector2>
+		<resource name="9/occluder"></resource>		<vector2 name="9/navigation_offset"> 16, 16 </vector2>
+		<resource name="9/navigation"></resource>		<vector2 name="9/shape_offset"> 16, 16 </vector2>
+		<array name="9/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://19">  </resource>
+		</array>
+		<string name="10/name"> "water_top_sunshine-big" </string>
+		<resource name="10/texture" external="2">  </resource>
+		<vector2 name="10/tex_offset"> 0, 0 </vector2>
+		<resource name="10/material"></resource>		<color name="10/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="10/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="10/occluder_offset"> 16, 16 </vector2>
+		<resource name="10/occluder"></resource>		<vector2 name="10/navigation_offset"> 16, 16 </vector2>
+		<resource name="10/navigation"></resource>		<vector2 name="10/shape_offset"> 16, 16 </vector2>
+		<array name="10/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://20">  </resource>
+		</array>
+		<string name="11/name"> "water_deep" </string>
+		<resource name="11/texture" external="3">  </resource>
+		<vector2 name="11/tex_offset"> 0, 0 </vector2>
+		<resource name="11/material"></resource>		<color name="11/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="11/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="11/occluder_offset"> 16, 16 </vector2>
+		<resource name="11/occluder"></resource>		<vector2 name="11/navigation_offset"> 16, 16 </vector2>
+		<resource name="11/navigation"></resource>		<vector2 name="11/shape_offset"> 0, 0 </vector2>
+		<array name="11/shapes" len="0" shared="false">
+		</array>
+		<string name="12/name"> "waterfall_frame_1" </string>
+		<resource name="12/texture" external="5">  </resource>
+		<vector2 name="12/tex_offset"> 0, 0 </vector2>
+		<resource name="12/material" external="4">  </resource>
+		<color name="12/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="12/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="12/occluder_offset"> 16, 16 </vector2>
+		<resource name="12/occluder"></resource>		<vector2 name="12/navigation_offset"> 16, 16 </vector2>
+		<resource name="12/navigation"></resource>		<vector2 name="12/shape_offset"> 0, 0 </vector2>
+		<array name="12/shapes" len="0" shared="false">
+		</array>
+		<string name="13/name"> "waterfall_mouth_frame_1" </string>
+		<resource name="13/texture" external="7">  </resource>
+		<vector2 name="13/tex_offset"> 0, 0 </vector2>
+		<resource name="13/material" external="6">  </resource>
+		<color name="13/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="13/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="13/occluder_offset"> 16, 16 </vector2>
+		<resource name="13/occluder"></resource>		<vector2 name="13/navigation_offset"> 16, 16 </vector2>
+		<resource name="13/navigation"></resource>		<vector2 name="13/shape_offset"> 16, 16 </vector2>
+		<array name="13/shapes" len="1" shared="false">
+			<resource  resource_type="Shape2D" path="local://9">  </resource>
+		</array>
+		<string name="14/name"> "waterfall_spring_frame_1" </string>
+		<resource name="14/texture" external="9">  </resource>
+		<vector2 name="14/tex_offset"> 0, 0 </vector2>
+		<resource name="14/material" external="8">  </resource>
+		<color name="14/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="14/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="14/occluder_offset"> 16, 16 </vector2>
+		<resource name="14/occluder"></resource>		<vector2 name="14/navigation_offset"> 16, 16 </vector2>
+		<resource name="14/navigation"></resource>		<vector2 name="14/shape_offset"> 0, 0 </vector2>
+		<array name="14/shapes" len="0" shared="false">
+		</array>
+		<string name="15/name"> "wooden_platform" </string>
+		<resource name="15/texture" external="10">  </resource>
+		<vector2 name="15/tex_offset"> 0, 0 </vector2>
+		<resource name="15/material"></resource>		<color name="15/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="15/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="15/occluder_offset"> 16, 16 </vector2>
+		<resource name="15/occluder"></resource>		<vector2 name="15/navigation_offset"> 16, 16 </vector2>
+		<resource name="15/navigation"></resource>		<vector2 name="15/shape_offset"> 16, 16 </vector2>
+		<array name="15/shapes" len="3" shared="false">
+			<resource  resource_type="Shape2D" path="local://10">  </resource>
+			<resource  resource_type="Shape2D" path="local://11">  </resource>
+			<resource  resource_type="Shape2D" path="local://12">  </resource>
+		</array>
+		<string name="16/name"> "sunshine" </string>
+		<resource name="16/texture" external="11">  </resource>
+		<vector2 name="16/tex_offset"> 0, 0 </vector2>
+		<resource name="16/material"></resource>		<color name="16/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="16/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="16/occluder_offset"> 16, 16 </vector2>
+		<resource name="16/occluder"></resource>		<vector2 name="16/navigation_offset"> 16, 16 </vector2>
+		<resource name="16/navigation"></resource>		<vector2 name="16/shape_offset"> 0, 0 </vector2>
+		<array name="16/shapes" len="0" shared="false">
+		</array>
+		<string name="17/name"> "sunshine-big" </string>
+		<resource name="17/texture" external="12">  </resource>
+		<vector2 name="17/tex_offset"> 0, 0 </vector2>
+		<resource name="17/material"></resource>		<color name="17/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="17/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="17/occluder_offset"> 16, 16 </vector2>
+		<resource name="17/occluder"></resource>		<vector2 name="17/navigation_offset"> 16, 16 </vector2>
+		<resource name="17/navigation"></resource>		<vector2 name="17/shape_offset"> 0, 0 </vector2>
+		<array name="17/shapes" len="0" shared="false">
+		</array>
+		<string name="18/name"> "sunshine-thin" </string>
+		<resource name="18/texture" external="13">  </resource>
+		<vector2 name="18/tex_offset"> 0, 0 </vector2>
+		<resource name="18/material"></resource>		<color name="18/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="18/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="18/occluder_offset"> 16, 16 </vector2>
+		<resource name="18/occluder"></resource>		<vector2 name="18/navigation_offset"> 16, 16 </vector2>
+		<resource name="18/navigation"></resource>		<vector2 name="18/shape_offset"> 0, 0 </vector2>
+		<array name="18/shapes" len="0" shared="false">
+		</array>
+		<string name="19/name"> "tree_1" </string>
+		<resource name="19/texture" external="14">  </resource>
+		<vector2 name="19/tex_offset"> 0, 0 </vector2>
+		<resource name="19/material"></resource>		<color name="19/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="19/region"> 0, 0, 96, 96 </rect2>
+		<vector2 name="19/occluder_offset"> 48, 48 </vector2>
+		<resource name="19/occluder"></resource>		<vector2 name="19/navigation_offset"> 48, 48 </vector2>
+		<resource name="19/navigation"></resource>		<vector2 name="19/shape_offset"> 0, 0 </vector2>
+		<array name="19/shapes" len="0" shared="false">
+		</array>
+		<string name="20/name"> "tree_2" </string>
+		<resource name="20/texture" external="16">  </resource>
+		<vector2 name="20/tex_offset"> 0, 0 </vector2>
+		<resource name="20/material"></resource>		<color name="20/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="20/region"> 0, 0, 96, 96 </rect2>
+		<vector2 name="20/occluder_offset"> 48, 48 </vector2>
+		<resource name="20/occluder"></resource>		<vector2 name="20/navigation_offset"> 48, 48 </vector2>
+		<resource name="20/navigation"></resource>		<vector2 name="20/shape_offset"> 0, 0 </vector2>
+		<array name="20/shapes" len="0" shared="false">
+		</array>
+		<string name="21/name"> "water_background" </string>
+		<resource name="21/texture" external="17">  </resource>
+		<vector2 name="21/tex_offset"> 0, 0 </vector2>
+		<resource name="21/material"></resource>		<color name="21/modulate"> 1, 1, 1, 1 </color>
+		<rect2 name="21/region"> 0, 0, 32, 32 </rect2>
+		<vector2 name="21/occluder_offset"> 16, 16 </vector2>
+		<resource name="21/occluder"></resource>		<vector2 name="21/navigation_offset"> 16, 16 </vector2>
+		<resource name="21/navigation"></resource>		<vector2 name="21/shape_offset"> 0, 0 </vector2>
+		<array name="21/shapes" len="0" shared="false">
+		</array>
+
+	</main_resource>
+</resource_file>
